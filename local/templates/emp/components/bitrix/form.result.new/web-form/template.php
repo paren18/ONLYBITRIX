@@ -31,28 +31,33 @@ if ($arResult["isFormErrors"] == "Y"):?>
             <div class="input contact-form__input">
                 <label class="input__label" for="<?=$arResult["QUESTIONS"]['NAME']['CAPTION'] ?>">
                     <div class="input__label-text"><?=$arResult["QUESTIONS"]['NAME']['CAPTION']?> <?=($arResult["QUESTIONS"]['NAME']['REQUIRED'] === 'Y' ? '*' : '') ?></div>
-                    <?= $arResult["QUESTIONS"]['NAME']['HTML_CODE'] ?><br>
+                    <input class="input__input" type="text" id="medicine_name" name="form_text_12" value=""
+                           required="">
                     <div class="input__notification">Поле должно содержать не менее 3-х символов</div>
                 </label>
             </div>
             <div class="input contact-form__input">
                 <label class="input__label" for="<?= $arResult["QUESTIONS"]['COMPANY']['CAPTION'] ?>">
                     <div class="input__label-text"><?= $arResult["QUESTIONS"]['COMPANY']['CAPTION'] ?><?= ($arResult["QUESTIONS"]['COMPANY']['REQUIRED'] === 'Y' ? '*' : '') ?></div>
-                    <?= $arResult["QUESTIONS"]['COMPANY']['HTML_CODE'] ?><br>
+                    <input class="input__input" type="text" id="medicine_company" name="form_text_13" value=""
+                           required="">
                     <div class="input__notification">Поле должно содержать не менее 3-х символов</div>
                 </label>
             </div>
             <div class="input contact-form__input">
                 <label class="input__label" for="<?= $arResult["QUESTIONS"]['EMAIL']['CAPTION'] ?>">
                     <div class="input__label-text"><?= $arResult["QUESTIONS"]['EMAIL']['CAPTION'] ?><?= ($arResult["QUESTIONS"]['EMAIL']['REQUIRED'] === 'Y' ? '*' : '') ?></div>
-                    <?= $arResult["QUESTIONS"]['EMAIL']['HTML_CODE'] ?><br>
+                    <input class="input__input" type="email" id="medicine_email" name="form_email_14" value=""
+                           required="">
                     <div class="input__notification">Неверный формат почты</div>
                 </label>
             </div>
             <div class="input contact-form__input">
                 <label class="input__label" for="<?= $arResult["QUESTIONS"]['PHONE']['CAPTION'] ?>">
                     <div class="input__label-text"><?= $arResult["QUESTIONS"]['PHONE']['CAPTION'] ?><?= ($arResult["QUESTIONS"]['PHONE']['REQUIRED'] === 'Y' ? '*' : '') ?></div>
-                    <?= $arResult["QUESTIONS"]['PHONE']['HTML_CODE'] ?><br>
+                    <input class="input__input" type="tel" id="medicine_phone"
+                           data-inputmask="'mask': '+79999999999', 'clearIncomplete': 'true'" maxlength="12"
+                           x-autocompletetype="phone-full" name="form_text_17" value="" required="">
                 </label>
             </div>
         </div>
@@ -60,7 +65,8 @@ if ($arResult["isFormErrors"] == "Y"):?>
             <div class="input">
                 <label class="input__label" for="<?= $arResult["QUESTIONS"]['MESSAGE']['CAPTION'] ?>">
                     <div class="input__label-text"><?= $arResult["QUESTIONS"]['MESSAGE']['CAPTION']?><?= ($arResult["QUESTIONS"]['MESSAGE']['REQUIRED'] === 'Y' ? '*' : '') ?></div>
-                    <?= $arResult["QUESTIONS"]['MESSAGE']['HTML_CODE']?><br>
+                    <textarea class="input__input" type="text" id="medicine_message" name="form_textarea_16"
+                              value=""></textarea>
                     <div class="input__notification"></div>
                 </label>
             </div>
